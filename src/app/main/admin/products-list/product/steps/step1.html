@@ -1,0 +1,115 @@
+<form name="vm.productInfo" class="md-inline-form" ms-form-wizard-form novalidate>
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="50">
+    <input type="text" name="name" ng-model="vm.model.name"
+    placeholder="Product Name"
+    required>
+    <div ng-messages="vm.productInfo.name.$error"
+      role="alert">
+      <div ng-message="required">
+        <span>This field is required.</span>
+      </div>
+    </div>
+    </md-input-container>
+    <md-input-container flex="100" flex-gt-xs="50">
+    <input type="text" name="price_per_unit" ng-model="vm.model.pricePerUnit"
+    placeholder="Price Per Unit"
+    required>
+    <div ng-messages="vm.productInfo.price_per_unit.$error"
+      role="alert">
+      <div ng-message="required">
+        <span>This field is required.</span>
+      </div>
+    </div>
+    </md-input-container>
+  </div>
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="50">
+    <input type="text" name="basic_unit" ng-model="vm.model.basicUnit"
+    placeholder="Basic Unit"
+    required>
+    <div ng-messages="vm.productInfo.basic_unit.$error"
+      role="alert">
+      <div ng-message="required">
+        <span>This field is required.</span>
+      </div>
+    </div>
+    </md-input-container>
+    
+    <md-input-container flex="100" flex-gt-xs="50">
+      <label>Active For Sale</label>
+      <md-select ng-model="vm.model.active_for_sale">
+        <md-option value="Yes">Yes</md-option>
+        <md-option value="No">No</md-option>
+      </md-select>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="quantity_sold" ng-model="vm.model.quantitySold"
+      placeholder="Quantity Sold"
+      required>
+      <div ng-messages="vm.productInfo.quantity_sold.$error"
+        role="alert">
+        <div ng-message="required">
+          <span>This field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+    
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="in_stock" ng-model="vm.model.inStock"
+      placeholder="In Stock"
+      required>
+      <div ng-messages="vm.productInfo.in_stock.$error"
+        role="alert">
+        <div ng-message="required">
+          <span>This field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex>
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="mrp" ng-model="vm.model.mrp"
+      placeholder="Product MRP"
+      required>
+      <div ng-messages="vm.productInfo.mrp.$error"
+        role="alert">
+        <div ng-message="required">
+          <span>This field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+    
+    <md-input-container flex="100" flex-gt-xs="50">
+      <input type="text" name="vat" ng-model="vm.model.vat"
+      placeholder="VAT"
+      required>
+      <div ng-messages="vm.productInfo.vat.$error"
+        role="alert">
+        <div ng-message="required">
+          <span>This field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+  </div>
+
+  <div layout="column" layout-gt-xs="row" flex="50">
+    <md-input-container flex="50">
+      <input type="text" name="offer" ng-model="vm.model.offer"
+      placeholder="Product Offer"
+      required>
+      <div ng-messages="vm.productInfo.offer.$error"
+        role="alert">
+        <div ng-message="required">
+          <span>This field is required.</span>
+        </div>
+      </div>
+    </md-input-container>
+  </div>
+
+
+</form>

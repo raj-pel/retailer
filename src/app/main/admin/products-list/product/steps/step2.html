@@ -1,0 +1,45 @@
+<form name="vm.advanceInfo" ms-form-wizard-form novalidate>
+    <div layout="column" layout-gt-xs="row">
+        <md-input-container flex>
+            <label>City</label>
+            <input type="text" name="city" ng-model="vm.formWizard.city">
+        </md-input-container>
+
+        <md-input-container flex>
+            <label>State</label>
+            <md-select ng-model="vm.formWizard.state">
+                <md-option ng-repeat="state in vm.states" value="{{state.abbrev}}">
+                    {{state.abbrev}}
+                </md-option>
+            </md-select>
+        </md-input-container>
+
+        <md-input-container flex>
+            <label>Postal Code</label>
+            <input name="postalcode" ng-model="vm.formWizard.postalCode" placeholder="12345"
+                   required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+            <div ng-messages="wizardStep2.postalcode.$error"
+                 role="alert" multiple>
+                <div ng-message="required"><span>You must supply a postal code.</span></div>
+                <div ng-message="pattern">
+                    <span>That doesn't look like a valid postal code.</span></div>
+                <div ng-message="md-maxlength">
+                    <span>Postal code can't be longer than 5 characters.</span>
+                </div>
+            </div>
+        </md-input-container>
+    </div>
+
+    <md-input-container class="md-block">
+        <label>Address</label>
+        <textarea ng-model="vm.formWizard.address" md-maxlength="150" max-rows="5"
+                  required></textarea>
+        <div ng-messages="wizardStep2.address.$error"
+             role="alert" multiple>
+            <div ng-message="required"><span>Address field is required.</span></div>
+            <div ng-message="md-maxlength">
+                <span>Address can't be longer than 150 characters.</span>
+            </div>
+        </div>
+    </md-input-container>
+</form>

@@ -1,0 +1,13 @@
+@import '../../_variables.scss';
+.admin-page.simple.fullwidth {
+  .header {
+    min-height: $header-height;
+    height: $header-height;
+  }
+
+  .header .title {
+    font-weight: 200;
+  }
+} 
+
+

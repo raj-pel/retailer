@@ -1,0 +1,121 @@
+<div class="page-layout simple admin-page fullwidth doc-page element-doc-page">
+
+  <!-- HEADER -->
+  <div class="header md-accent-bg" layout="row" layout-align="space-between">
+    <div layout="column" layout-align="center start">
+      <div class="title">New Customer</div>
+    </div>
+  </div>
+  <!-- / HEADER -->
+
+  <!-- CONTENT -->
+  <div class="content">
+    <div class="white-bg md-whiteframe-4dp">
+
+      <form name="vm.customerInfo" class="md-inline-form form-wrapper" novalidate>
+        
+        <div layout="column" layout-gt-xs="row" flex>
+          <md-input-container flex="100" flex-gt-xs="50">
+            <input type="text" name="name" ng-model="vm.model.name"
+            placeholder="Counter Name"
+            required>
+            <div ng-messages="vm.customerInfo.name.$error"
+              role="alert">
+              <div ng-message="required">
+                <span>This field is required.</span>
+              </div>
+            </div>
+          </md-input-container>
+
+          <md-input-container flex="100" flex-gt-xs="50">
+            <input type="text" name="contact_name" ng-model="vm.model.contactName"
+            placeholder="Contact person Name"
+            required>
+            <div ng-messages="vm.customerInfo.contact_name.$error"
+              role="alert">
+              <div ng-message="required">
+                <span>This field is required.</span>
+              </div>
+            </div>
+          </md-input-container>
+        </div>
+
+        <div layout="column" layout-gt-xs="row" flex>
+          <md-input-container flex="100" flex-gt-xs="50">
+            <input type="text" name="contact_no" ng-model="vm.model.contactNumber"
+            placeholder="Contact Number"
+            required>
+            <div ng-messages="vm.customerInfo.contact_no.$error"
+              role="alert">
+              <div ng-message="required">
+                <span>This field is required.</span>
+              </div>
+            </div>
+          </md-input-container>
+          
+          <md-input-container flex="100" flex-gt-xs="50">
+            <input type="text" name="phone" ng-model="vm.model.phone"
+            placeholder="Phone No"
+            required>
+            <div ng-messages="vm.customerInfo.phone.$error"
+              role="alert">
+              <div ng-message="required">
+                <span>This field is required.</span>
+              </div>
+            </div>
+          </md-input-container>
+        </div>
+
+        <div layout="column" layout-gt-xs="row" flex>
+          <md-input-container flex="100" flex-gt-xs="50">
+            <textarea name="address" ng-model="vm.model.address" md-maxlength="150" rows="5" md-select-on-focus placeholder="Address"></textarea>
+            <div ng-messages="vm.customerInfo.address.$error"
+              role="alert">
+              <div ng-message="required">
+                <span>This field is required.</span>
+              </div>
+            </div>
+          </md-input-container>
+        </div>
+
+        <div layout="column" layout-gt-xs="row">
+          <md-input-container flex>
+              <label>City</label>
+              <input type="text" name="city" ng-model="vm.model.city">
+          </md-input-container>
+
+          <md-input-container flex>
+              <label>State</label>
+              <md-select ng-model="vm.model.state">
+                  <md-option value="karnataka">
+                    Karnataka
+                  </md-option>
+              </md-select>
+          </md-input-container>
+
+          <md-input-container flex>
+              <label>Postal Code</label>
+              <input name="postalcode" ng-model="vm.model.postalCode" placeholder="12345" required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+              <div ng-messages="vm.customerInfo.postalcode.$error"
+                   role="alert">
+                  <div ng-message="required"><span>You must supply a postal code.</span></div>
+                  <div ng-message="pattern">
+                      <span>That doesn't look like a valid postal code.</span></div>
+                  <div ng-message="md-maxlength">
+                      <span>Postal code can't be longer than 5 characters.</span>
+                  </div>
+              </div>
+          </md-input-container>
+        </div>
+
+        <div layout="row" flex layout-align="end center">
+          <md-button class="md-raised md-primary">Save</md-button>
+        </div>
+        
+      </form>
+        
+    </div>
+  </div>
+  <!-- / CONTENT -->
+
+</div>
